@@ -19,10 +19,11 @@ class StoriesList extends StatelessWidget {
                 width: 15.w,
                 height: 17.h,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 3),
+                  // border: Border.all(color: Colors.black, width: 3),
+                  color: const Color(0xFFEFEFEF),
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/images/stories${index + 1}.jpeg',
+                      'assets/images/stori${index + 1}.png',
                     ),
                     fit: BoxFit.fill,
                   ),

@@ -37,7 +37,7 @@ class _CategoriesListState extends State<CategoriesList> {
               children: [
                 Container(
                   width: 30.w,
-                  height: 15.h,
+                  height: 12.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(

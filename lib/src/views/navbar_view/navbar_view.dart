@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/src/views/home_view/home_view.dart';
 
 class NavbarView extends StatefulWidget {
@@ -63,10 +64,7 @@ class _NavbarViewState extends State<NavbarView> {
                             : Colors.transparent,
                         shape: const OvalBorder(),
                       ),
-                      child: Icon(
-                        Icons.home,
-                        color: _selectedIndex == 0 ? Colors.black : Colors.grey,
-                      ),
+                      child: Image.asset('assets/icons/home.png'),
                     ),
                   ],
                 ),
@@ -77,19 +75,15 @@ class _NavbarViewState extends State<NavbarView> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      width: 56,
-                      height: 56,
-                      decoration: ShapeDecoration(
-                        color: _selectedIndex == 1
-                            ? const Color(0xFFE1E1E1)
-                            : Colors.transparent,
-                        shape: const OvalBorder(),
-                      ),
-                      child: Icon(
-                        Icons.folder,
-                        color: _selectedIndex == 1 ? Colors.black : Colors.grey,
-                      ),
-                    ),
+                        width: 56,
+                        height: 56,
+                        decoration: ShapeDecoration(
+                          color: _selectedIndex == 1
+                              ? const Color(0xFFE1E1E1)
+                              : Colors.transparent,
+                          shape: const OvalBorder(),
+                        ),
+                        child: Image.asset('assets/icons/folder.png')),
                   ],
                 ),
               ),
@@ -99,19 +93,18 @@ class _NavbarViewState extends State<NavbarView> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      width: 56,
-                      height: 56,
-                      decoration: ShapeDecoration(
-                        color: _selectedIndex == 2
-                            ? const Color(0xFFE1E1E1)
-                            : Colors.transparent,
-                        shape: const OvalBorder(),
-                      ),
-                      child: Icon(
-                        Icons.qr_code_scanner,
-                        color: _selectedIndex == 2 ? Colors.black : Colors.grey,
-                      ),
-                    ),
+                        width: 56,
+                        height: 56,
+                        decoration: ShapeDecoration(
+                          color: _selectedIndex == 2
+                              ? const Color(0xFFE1E1E1)
+                              : Colors.transparent,
+                          shape: const OvalBorder(),
+                        ),
+                        child: Image.asset(
+                          'assets/icons/scanner.png',
+                          height: 10,
+                        )),
                   ],
                 ),
               ),
@@ -121,19 +114,15 @@ class _NavbarViewState extends State<NavbarView> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      width: 56,
-                      height: 56,
-                      decoration: ShapeDecoration(
-                        color: _selectedIndex == 3
-                            ? const Color(0xFFE1E1E1)
-                            : Colors.transparent,
-                        shape: const OvalBorder(),
-                      ),
-                      child: Icon(
-                        Icons.chat_bubble_outline,
-                        color: _selectedIndex == 3 ? Colors.black : Colors.grey,
-                      ),
-                    ),
+                        width: 56,
+                        height: 56,
+                        decoration: ShapeDecoration(
+                          color: _selectedIndex == 3
+                              ? const Color(0xFFE1E1E1)
+                              : Colors.transparent,
+                          shape: const OvalBorder(),
+                        ),
+                        child: Image.asset('assets/icons/message.png')),
                   ],
                 ),
               ),
@@ -143,19 +132,15 @@ class _NavbarViewState extends State<NavbarView> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Container(
-                      width: 56,
-                      height: 56,
-                      decoration: ShapeDecoration(
-                        color: _selectedIndex == 4
-                            ? const Color(0xFFE1E1E1)
-                            : Colors.transparent,
-                        shape: const OvalBorder(),
-                      ),
-                      child: Icon(
-                        Icons.shopping_bag,
-                        color: _selectedIndex == 4 ? Colors.black : Colors.grey,
-                      ),
-                    ),
+                        width: 56,
+                        height: 56,
+                        decoration: ShapeDecoration(
+                          color: _selectedIndex == 4
+                              ? const Color(0xFFE1E1E1)
+                              : Colors.transparent,
+                          shape: const OvalBorder(),
+                        ),
+                        child: Image.asset('assets/icons/bag.png')),
                   ],
                 ),
               ),

@@ -18,7 +18,7 @@ class NewsAndPromotions extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             controller: pageController,
-            itemCount:totalItems,
+            itemCount: totalItems,
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: 2.w),
