@@ -56,7 +56,7 @@ class UserInfo extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 13.sp,
-                fontFamily: 'SF Pro Display',
+                fontFamily: 'SFPRODISPLAY',
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -66,7 +66,7 @@ class UserInfo extends StatelessWidget {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16.sp,
-                fontFamily: 'SF Pro Display',
+                fontFamily: 'SFPRODISPLAY',
                 fontWeight: FontWeight.w600,
                 letterSpacing: 0.28.sp,
               ),
@@ -131,6 +131,7 @@ class BonusInfo extends StatelessWidget {
               style: TextStyle(
                 color: const Color(0xFF878787),
                 fontSize: 14.sp,
+                fontFamily: 'SFPRODISPLAY',
               ),
             ),
             Row(
@@ -146,7 +147,7 @@ class BonusInfo extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20.sp,
-                    fontFamily: 'SF Pro Display',
+                    fontFamily: 'SFPRODISPLAY',
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -159,7 +160,7 @@ class BonusInfo extends StatelessWidget {
           style: TextStyle(
             color: const Color(0xFF878787),
             fontSize: 14.sp,
-            fontFamily: 'SF Pro Display',
+            fontFamily: 'SFPRODISPLAY',
             fontWeight: FontWeight.w400,
           ),
         ),

@@ -55,7 +55,8 @@ class _CategoriesListState extends State<CategoriesList> {
                   style: TextStyle(
                     color: const Color(0xFF111111),
                     fontSize: 14.sp,
-                    fontWeight: FontWeight.w700,
+                    // fontWeight: FontWeight.w100,
+                    fontFamily: 'SFPRODISPLAY',
                   ),
                 )
               ],

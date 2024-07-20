@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/src/views/home_view/home_view.dart';
 
 class NavbarView extends StatefulWidget {
@@ -10,106 +9,160 @@ class NavbarView extends StatefulWidget {
 }
 
 class _NavbarViewState extends State<NavbarView> {
-  int _currentIndex = 0;
+  int _selectedIndex = 0;
 
-  final List<Widget> _views = [
+  final List<Widget> _pages = [
     const HomeView(),
-    Container(color: Colors.white), // FolderView
-    Container(color: Colors.white), // ScannerView
-    Container(color: Colors.white), // ChatView
-    Container(color: Colors.white), // BagView
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
   ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: _views[_currentIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          // borderRadius: BorderRadius.circular(30),
-          shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              spreadRadius: 2,
-              blurRadius: 5,
-            ),
-          ],
-        ),
-        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(35),
-          child: BottomNavigationBar(
-            currentIndex: _currentIndex,
-            showUnselectedLabels: true,
-            type: BottomNavigationBarType.fixed,
-            backgroundColor: const Color(0xFFF4F4F4),
-            selectedItemColor: const Color(0xFFE1E1E1),
-            unselectedItemColor: Colors.black,
-            onTap: (value) {
-              setState(() {
-                _currentIndex = value;
-              });
-            },
-            items: [
-              _buildBottomNavigationBarItem(
-                iconPath: 'assets/icons/home.svg',
-                label: '',
+      body: _pages[_selectedIndex],
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30.0),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 7,
+                offset: const Offset(0, 3),
               ),
-              _buildBottomNavigationBarItem(
-                iconPath: 'assets/icons/folder.svg',
-                label: '',
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              GestureDetector(
+                onTap: () => _onItemTapped(0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: _selectedIndex == 0
+                            ? const Color(0xFFE1E1E1)
+                            : Colors.transparent,
+                        shape: const OvalBorder(),
+                      ),
+                      child: Icon(
+                        Icons.home,
+                        color: _selectedIndex == 0 ? Colors.black : Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              _buildBottomNavigationBarItem(
-                iconPath: 'assets/icons/scanner.svg',
-                label: '',
+              GestureDetector(
+                onTap: () => _onItemTapped(1),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: _selectedIndex == 1
+                            ? const Color(0xFFE1E1E1)
+                            : Colors.transparent,
+                        shape: const OvalBorder(),
+                      ),
+                      child: Icon(
+                        Icons.folder,
+                        color: _selectedIndex == 1 ? Colors.black : Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              _buildBottomNavigationBarItem(
-                iconPath: 'assets/icons/message.svg',
-                label: '',
+              GestureDetector(
+                onTap: () => _onItemTapped(2),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: _selectedIndex == 2
+                            ? const Color(0xFFE1E1E1)
+                            : Colors.transparent,
+                        shape: const OvalBorder(),
+                      ),
+                      child: Icon(
+                        Icons.qr_code_scanner,
+                        color: _selectedIndex == 2 ? Colors.black : Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              _buildBottomNavigationBarItem(
-                iconPath: 'assets/icons/bag.svg',
-                label: '',
+              GestureDetector(
+                onTap: () => _onItemTapped(3),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: _selectedIndex == 3
+                            ? const Color(0xFFE1E1E1)
+                            : Colors.transparent,
+                        shape: const OvalBorder(),
+                      ),
+                      child: Icon(
+                        Icons.chat_bubble_outline,
+                        color: _selectedIndex == 3 ? Colors.black : Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              GestureDetector(
+                onTap: () => _onItemTapped(4),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: _selectedIndex == 4
+                            ? const Color(0xFFE1E1E1)
+                            : Colors.transparent,
+                        shape: const OvalBorder(),
+                      ),
+                      child: Icon(
+                        Icons.shopping_bag,
+                        color: _selectedIndex == 4 ? Colors.black : Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
         ),
       ),
-    );
-  }
-
-  BottomNavigationBarItem _buildBottomNavigationBarItem({
-    required String iconPath,
-    required String label,
-  }) {
-    return BottomNavigationBarItem(
-      icon: SvgPicture.asset(
-        iconPath,
-        height: 35,
-      ),
-      activeIcon: Container(
-        width: 66,
-        height: 66,
-        decoration: ShapeDecoration(
-          color: const Color(0xFFE1E1E1),
-          shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(50), // Circular border for rounded effect
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: SvgPicture.asset(
-            iconPath,
-            width: 35,
-            height: 35,
-          ),
-        ),
-      ),
-      label: label,
     );
   }
 }

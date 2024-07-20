@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -19,9 +16,10 @@ class SectionHeader extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            color: const Color(0xFF111111),
+            color: Colors.black,
             fontSize: 16.sp,
             fontWeight: FontWeight.w700,
+            fontFamily: 'SFPRODISPLAY',
           ),
         ),
         GestureDetector(
@@ -34,6 +32,7 @@ class SectionHeader extends StatelessWidget {
                   color: const Color(0xFF4A4A4A),
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w300,
+                  fontFamily: 'SFPRODISPLAY',
                 ),
               ),
               SizedBox(width: 2.w),

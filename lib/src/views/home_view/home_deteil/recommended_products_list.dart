@@ -19,21 +19,21 @@ class _RecommendedProductsListState extends State<RecommendedProductsList> {
       'price': '9999999 сом',
     },
     {
-      'image': 'assets/images/stories3.jpeg',
+      'image': 'assets/images/no_foto.png',
       'id': 'TM-64529',
       'title': 'Jordan кроссовки \n5 Retro',
       'oldPrice': '',
       'price': '15000 сом',
     },
     {
-      'image': 'assets/images/stories4.jpeg',
+      'image': 'assets/images/no_foto.png',
       'id': 'TM-64529',
       'title': 'Jordan кроссовки \nGrape баскетбо...',
       'oldPrice': '',
       'price': '15000 сом',
     },
     {
-      'image': 'assets/images/stories2.jpeg',
+      'image': 'assets/images/no_foto.png',
       'id': 'TM-64529',
       'title': 'Jordan кроссовки \nGrape баскетбо...',
       'oldPrice': '',
@@ -75,6 +75,7 @@ class _RecommendedProductsListState extends State<RecommendedProductsList> {
                   style: TextStyle(
                     fontSize: 14.sp,
                     color: Colors.grey,
+                    fontFamily: 'SFPRODISPLAY',
                   ),
                 ),
                 SizedBox(height: 1.4.h),
@@ -83,6 +84,7 @@ class _RecommendedProductsListState extends State<RecommendedProductsList> {
                   style: TextStyle(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'SFPRODISPLAY',
                   ),
                 ),
                 SizedBox(height: 1.4.h),
@@ -99,6 +101,7 @@ class _RecommendedProductsListState extends State<RecommendedProductsList> {
                               fontSize: 14.sp,
                               color: Colors.grey,
                               decoration: TextDecoration.lineThrough,
+                              fontFamily: 'SFPRODISPLAY',
                             ),
                           ),
                         if (product['oldPrice']!.isNotEmpty)
@@ -108,6 +111,7 @@ class _RecommendedProductsListState extends State<RecommendedProductsList> {
                           style: TextStyle(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'SFPRODISPLAY',
                             color: priceColor,
                           ),
                         ),

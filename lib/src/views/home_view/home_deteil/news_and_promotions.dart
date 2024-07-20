@@ -18,7 +18,7 @@ class NewsAndPromotions extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             controller: pageController,
-            itemCount: totalItems,
+            itemCount:totalItems,
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: 2.w),
@@ -27,8 +27,8 @@ class NewsAndPromotions extends StatelessWidget {
                   height: 23.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/banner.png'),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/banner${index + 1}.png'),
                       fit: BoxFit.fill,
                     ),
                   ),

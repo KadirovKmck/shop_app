@@ -14,9 +14,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveSizer(
       builder: (context, orientation, deviceType) {
-        return const MaterialApp(
+        return MaterialApp(
+          theme: ThemeData(
+            fontFamily: 'SFPRODISPLAY',
+            primarySwatch: Colors.blue,
+          ),
           debugShowCheckedModeBanner: false,
-          home: NavbarView(),
+          home: const NavbarView(),
         );
       },
     );
